@@ -1,0 +1,55 @@
+[project]
+name = "raidot-ai"
+version = "0.1.0"
+description = "AI-powered security orchestration platform"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.12.0",
+    "langchain>=0.1.16",
+    "langchain-community>=0.0.38",
+    "langchain-openai>=0.1.3",
+    "transformers>=4.39.3",
+    "torch>=2.2.2",
+    "numpy>=1.24.3",
+    "crewai>=0.28.0",
+    "pyautogen>=0.2.0",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.29.0",
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.1",
+    "pydantic>=2.6.4",
+    "tiktoken>=0.6.0",
+    "faiss-cpu>=1.8.0",
+    "jupyter>=1.0.0",
+    "python-socketio>=5.11.1",
+    "Flask==3.1.2",
+    "Flask-SQLAlchemy==3.0.5",
+    "gunicorn==21.2.0",
+    "opencv-python==4.12.0.88",
+    "scikit-image==0.25.2",
+    "scikit-learn==1.7.2",
+    "Werkzeug==3.1.3",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+isl = [
+    "opencv-python",
+    "mediapipe", 
+    "tensorflow",
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "onnx",
+    "onnxruntime",
+    "pyttsx3",
+    "matplotlib",
+    "pandas"
+]
+
+[tool.setuptools]
+packages = ["isl_pipeline", "isl_pipeline.utils", "isl_pipeline.models", "isl_pipeline.tests"]

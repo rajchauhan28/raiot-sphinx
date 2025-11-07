@@ -1,0 +1,50 @@
+.translation-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.translation-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.translation-display {
+  width: 100%;
+  min-height: 150px;
+  padding: 1.5rem;
+  background-color: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.translation-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #34495e;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .translation-title {
+    font-size: 1.1rem;
+  }
+  
+  .translation-text {
+    font-size: 1.2rem;
+  }
+  
+  .translation-display {
+    min-height: 120px;
+    padding: 1rem;
+  }
+}

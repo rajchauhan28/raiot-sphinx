@@ -1,0 +1,46 @@
+.ai-status-container {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.ai-status-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.ai-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ai-status-container {
+    margin-top: 1rem;
+  }
+  
+  .ai-status-label, .status-text {
+    font-size: 0.8rem;
+  }
+  
+  .status-dot {
+    width: 10px;
+    height: 10px;
+  }
+}

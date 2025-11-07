@@ -1,0 +1,63 @@
+.about-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.hackathon-context {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-left: 4px solid #3498db;
+  margin: 1.5rem 0;
+}
+
+.ai-status {
+  background-color: #fff8e1;
+  padding: 1rem;
+  border-left: 4px solid #ffc107;
+  margin-top: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+  }
+}

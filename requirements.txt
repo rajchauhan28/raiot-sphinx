@@ -1,0 +1,11 @@
+opencv-python
+mediapipe
+tensorflow
+numpy
+scipy
+scikit-learn
+onnx
+onnxruntime
+pyttsx3
+matplotlib
+pandas

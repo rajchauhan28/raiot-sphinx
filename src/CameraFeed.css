@@ -1,0 +1,46 @@
+.camera-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.camera-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.camera-video {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.camera-error, .camera-loading {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  color: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .camera-title {
+    font-size: 1.1rem;
+  }
+  
+  .camera-video, .camera-error, .camera-loading {
+    max-width: 100%;
+  }
+}
