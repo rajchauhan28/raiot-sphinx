@@ -11,10 +11,10 @@ CONFIDENCE_THRESHOLD = 0.8 # Set a threshold to avoid flickering predictions
 
 # --- Device Setup ---
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(f"✅ Using device: {device}")
+print(f"Using device: {device}")
 
 # --- Load Classifier Model ---
-print(f"📦 Loading model from {MODEL_PATH}...")
+print(f"Loading Loading model from {MODEL_PATH}...")
 try:
     checkpoint = torch.load(MODEL_PATH, map_location=device)
     classes = checkpoint["classes"]
@@ -23,7 +23,7 @@ try:
     model = ISLClassifier(input_size=input_size, num_classes=len(classes)).to(device)
     model.load_state_dict(checkpoint["model_state_dict"])
     model.eval()
-    print(f"✅ Model loaded successfully. Classes: {len(classes)}")
+    print(f" Model loaded successfully. Classes: {len(classes)}")
 except FileNotFoundError:
     print(f"❌ Error: Model file not found at {MODEL_PATH}. Please ensure the model is trained and saved correctly.")
     exit()
@@ -32,7 +32,7 @@ except Exception as e:
     exit()
 
 # --- MediaPipe Setup ---
-print("🔧 Initializing MediaPipe Hands...")
+print("Initializing Initializing MediaPipe Hands...")
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(
     max_num_hands=1, # We trained on single hands, so predict on one
@@ -40,22 +40,22 @@ hands = mp_hands.Hands(
     min_tracking_confidence=0.5
 )
 mp_drawing = mp.solutions.drawing_utils
-print("✅ MediaPipe Hands ready.")
+print(" MediaPipe Hands ready.")
 
 # --- Initialize Webcam ---
-print(f"\n📹 Opening webcam (index: {WEBCAM_INDEX})...")
+print(f"\nOpening Opening webcam (index: {WEBCAM_INDEX})...")
 cap = cv2.VideoCapture(WEBCAM_INDEX)
 if not cap.isOpened():
     print("❌ Error: Could not open webcam.")
     exit()
-print("✅ Webcam opened successfully.")
+print(" Webcam opened successfully.")
 
 # --- Real-time Prediction Loop ---
-print("\n🚀 Starting real-time prediction. Press 'q' to quit.")
+print("\nStarting Starting real-time prediction. Press 'q' to quit.")
 while cap.isOpened():
     success, frame = cap.read()
     if not success:
-        print("⚠️ Dropped frame.")
+        print("Dropped Dropped frame.")
         continue
 
     # Flip the frame horizontally for a selfie-view display
@@ -112,8 +112,8 @@ while cap.isOpened():
         break
 
 # --- Cleanup ---
-print("\n🛑 Stopping...")
+print("\nStopping Stopping...")
 hands.close()
 cap.release()
 cv2.destroyAllWindows()
-print("✅ Resources released.")
+print(" Resources released.")
