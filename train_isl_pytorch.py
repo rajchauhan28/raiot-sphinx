@@ -21,10 +21,10 @@ use_cuda = torch.cuda.is_available()
 if use_cuda:
     device = torch.device("cuda")
     torch.backends.cudnn.benchmark = True
-    print(f"✅ Using GPU: {torch.cuda.get_device_name(0)}")
+    print(f"Using GPU: {torch.cuda.get_device_name(0)}")
 else:
     device = torch.device("cpu")
-    print("✅ Using CPU.")
+    print("Using CPU.")
 
 # ===============================
 # CLASSIFIER MODEL

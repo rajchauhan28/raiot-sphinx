@@ -1,6 +1,9 @@
+torch
+torchvision
+torchaudio
+ultralytics
 opencv-python
 mediapipe
-tensorflow
 numpy
 scipy
 scikit-learn
@@ -9,3 +12,4 @@ onnxruntime
 pyttsx3
 matplotlib
 pandas
+tqdm

@@ -1,6 +1,37 @@
 # Dependencies
 node_modules/
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+venv/
+.venv
+.venv/
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Data (excluding important model files)
+*.csv
+*.json
+*.xml
+*.yml
+*.yaml
+!*.pth  # Keep trained model files
+!*.pt   # Keep model files like yolov8n-pose.pt
+
 # Production builds
 dist/
 build/
